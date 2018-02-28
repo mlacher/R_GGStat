@@ -1,7 +1,7 @@
 library(readxl)
 library(psych)
 library(ggplot2)
-PilotBuild <- read_excel("//svr-gauv-fs01/x-drive/30 Entwicklungsprojekte/Produktfamilien/FOX/VT028 - FOX MOBILE/INV/VT028-INV-021/02 Neb Head/333043930_protocol.xlsx", 
+PilotBuild <- read_excel("C:/Users/maximilian.lacher/Documents/GitHub/R_Shares/R_GGStat/333043930_protocol.xlsx", 
                          sheet = "Gauting Head Data", col_types = c("text", 
                                                                "text", "numeric", "numeric", "numeric", 
                                                                "numeric", "numeric", "numeric", 
