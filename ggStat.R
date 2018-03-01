@@ -10,22 +10,24 @@ PilotBuild <- read_excel("C:/Users/maximilian.lacher/Documents/GitHub/R_Shares/R
 
 "darkturquoise"
 
-describe(PilotBuild$Damping)
+des<-describe(PilotBuild$Damping)
 #skew pos = distribution skewed to left side, neg = distribution skewed to right side
 # kurtosis pos = distribution thin and steep, neg = wide and flat
 
 histo<-ggplot(PilotBuild, aes(x=Damping))+
   geom_histogram(aes (y=..density..),colour="white", fill= "deepskyblue3")+
-  geom_density() +
+  geom_density(alpha = 0.1, colour = "black") +
   theme_bw()+
   theme(panel.background = element_rect(fill = NA),
     panel.grid = element_blank(),
     panel.grid.major.y = element_line(colour = "White"),
     panel.grid.minor.y = element_line(colour = "White"),
-    panel.ontop = TRUE)+scale_color_brewer(palette = "Set2")
-
+    panel.ontop = TRUE)+scale_color_brewer(palette = "Set2")+
+   annotate("text", x = des$mean+des$sd, y = 0.275, label = paste("n=", sep = "", des$n))
 
 histo
+
+des$
 
 qq<-qplot(sample = PilotBuild$Damping, stat="qq")
 
