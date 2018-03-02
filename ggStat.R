@@ -23,7 +23,7 @@ des<-describe(PilotBuild$`Min Frequency Tube`)
 histo<-ggplot(PilotBuild, aes(x=`Min Frequency Tube`))+
   geom_histogram(colour="white", fill= "deepskyblue3", aes(y= ..density..))+
   geom_density(alpha = 0.1, colour = "black", aes(y= ..density..))+
-  geom_point(aes(x=des$mean,y=0),size = 7, shape =3)+
+  #geom_point(aes(x=des$mean,y=0),size = 7, shape =3)+
   theme_bw()+
   theme(panel.background = element_rect(fill = NA),
     panel.grid = element_blank(),
